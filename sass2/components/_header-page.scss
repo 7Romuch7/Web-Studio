@@ -1,60 +1,15 @@
-.header-page {
-    position: relative;
-
-    border: 1px solid $solid-color3;
-}
-
 .container-main-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 60px;
 }
 
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-}
-
-.menu-close {
-    width: 40px;
-    height: 40px;
-}
-
-/*.menu-button .icon-close-menu {
-    display: none;
-}
-
-.menu-button.is-open .icon-close-menu {
-    display: block;
-}
-
-.menu-button.is-open .icon-menu {
-    display: none;
-}*/
-
-/*.menu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-
-    width: 100%;
-    background-color: $white-color;
-}
-*/
 .site-nav {
-    margin: 0;
-    padding: 0;
+    @include centeredflex();
+    margin-left: 85px;
 
     &-item + &-item {
-        margin-top: 40px;
+        margin-left: 50px;
     }
 }
 
@@ -62,8 +17,8 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     display: block;
-    margin: 0;
-    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     color: $title-text-color;
     font-weight: 500;
@@ -73,7 +28,7 @@
     text-decoration: none;
 
     &:hover, &:focus {
-        color: $accent-color;
+    color: $accent-color;
     }
 
     &.current {
@@ -95,15 +50,14 @@
 }
 
 .address-container {
-    margin-top: 58px;
+    margin-left: auto;
 }
 
 .auth-nav {
-    margin: 0;
-    padding: 0;
-    
+    @include centeredflex();
+
     &-item + &-item {
-        margin-top: 16px;
+    margin-left: 30px;
     }
 }
 
@@ -114,6 +68,10 @@
 
 .info {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
 
     color: $primary-text-color;
     font-weight: 500;

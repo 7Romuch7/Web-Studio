@@ -6,11 +6,23 @@
 }
 
 .container {
-    width: 1200px;
+    padding: 0;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (min-width: 480px) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: $desktop;
+    }
 
     img {
         display: block;
@@ -24,13 +36,12 @@
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-bottom: 60px;
 }
 
 .section-title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: $title-text-color;
     font-weight: $basic-weight;
