@@ -8,7 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 60px;
+
+    @media screen and (min-width: $tablet) {
+        max-height: 80px;
+    }
 }
 
 .menu-button {
@@ -17,6 +20,22 @@
     padding: 0;
     border: none;
     background-color: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    & .icon-close-menu {
+        display: none;
+    }
+
+    &.is-open .icon-close-menu {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
 }
 
 .menu-close {
@@ -24,38 +43,50 @@
     height: 40px;
 }
 
-/*.menu-button .icon-close-menu {
-    display: none;
+.menu-container {
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+
+        background-color: $white-color;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.is-open {
+        display: block;
+    }
 }
 
-.menu-button.is-open .icon-close-menu {
-    display: block;
-}
-
-.menu-button.is-open .icon-menu {
-    display: none;
-}*/
-
-/*.menu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-
-    width: 100%;
-    background-color: $white-color;
-}
-*/
 .site-nav {
     margin: 0;
     padding: 0;
 
     &-item + &-item {
-        margin-top: 40px;
+        @media screen and (max-width: 767px) {
+            margin-top: 40px;
+        }
     }
+
+    @media screen and (min-width: $tablet) {
+        @include centeredflex();
+
+        &-item + &-item {
+            margin-left: 50px;
+        }
+    }
+
 }
 
 .link-1 {
@@ -71,6 +102,11 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 
     &:hover, &:focus {
         color: $accent-color;
@@ -95,7 +131,19 @@
 }
 
 .address-container {
-    margin-top: 58px;
+    @media screen and (max-width: 767px) {
+        margin-top: 58px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 84px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 305px;
+    }
 }
 
 .auth-nav {
@@ -103,13 +151,32 @@
     padding: 0;
     
     &-item + &-item {
-        margin-top: 16px;
+        @media screen and (max-width: 767px) {
+            margin-top: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        &-item + &-item {
+            margin-top: 10px;
+        } 
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include centeredflex();
+        &-item + &-item {
+            margin-left: 30px;
+        }
     }
 }
 
 .icon-mail, .icon-phone {
     margin-right: 10px;
     fill: currentColor;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 8px;
+    }
 }
 
 .info {
