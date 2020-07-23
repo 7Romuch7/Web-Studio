@@ -1,16 +1,26 @@
 .footer {
     background-color: $complementary-color5;
-    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
-/*.data {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-}*/
+.data {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.container-address {
-    padding-top: 60px;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
 }
 
  /* Address-list */
@@ -30,11 +40,19 @@
 
     .dislocation {
         margin-bottom: 8px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 9px;
+        }
     }
  }
 
 .email {
     margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
+    }
 }
 
 .info-2 {
@@ -48,8 +66,9 @@
 /* Links-list-2 */
 
 .container-invitation {
-    margin-top: 60px;
-    text-align: center;
+    @media screen and (max-width: 767px) {
+        margin-top: 60px;
+    }
 }
 
 .invitation {
@@ -64,6 +83,10 @@
 
 .links-list-2 {
     @include centeredflex();
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
 
     .social-2 + .social-2 {
         margin-left: 10px;
@@ -93,17 +116,35 @@
 /* Form-mailing */
 
 .container-mailing {
-    margin-top: 60px;
+    @media screen and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+}
+
+.form-container {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .form-mailing input {
-    width: 450px;
     height: 50px;
 
     border: 1px solid $solid-color;
     box-shadow: 0px 4px 4px $shadow-color4;
     border-radius: 4px;
     background-color: $complementary-color5;
+
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+        margin-right: 12px;
+    }
 }
 
 .form-mailing input::placeholder {
@@ -114,8 +155,11 @@
 
 .input-mail {
     margin-top: 0;
-    margin-bottom: 20px;
     padding-left: 16px;
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
 }
 
 .mailing {

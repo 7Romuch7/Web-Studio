@@ -26,18 +26,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 210px;
+    width: 100%;
     height: 90px;
     border: 1px solid $complementary-color8;
     border-radius: 4px;
-
-    @media screen and (min-width: $tablet) {
-        width: 226px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        width: 170px;
-    }
 
     &:hover, &:focus {
         border-color: $accent-color;
