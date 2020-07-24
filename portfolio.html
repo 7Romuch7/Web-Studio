@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
@@ -17,28 +17,38 @@
                     <span class="logo-blue">Web</span>
                     <span class="logo-black">Studio</span>
                 </a>
-                <ul class="site-nav">
-                    <li class="site-nav-item"><a class="link-1" href="./index.html">Студия</a></li>
-                    <li class="site-nav-item"><a class="link-1 active current" href="./portfolio.html">Портфолио</a></li>
-                    <li class="site-nav-item"><a class="link-1" href="">Контакты</a></li>
-                </ul>
-            
-                <address class="address-container">
-                    <ul class="auth-nav">
-                        <li class="auth-nav-item">
-                            <a class="info mail" href="mailto:info@devstudio.com" aria-label="написать письмо на электронную почту info@devstudio.com">
-                                <svg class="icon-mail" width="16" height="11">
-                                    <use href="./images/sprite.svg#envelope"></use>
-                                </svg>info@devstudio.com</a>
-                        </li>
-                        <li class="auth-nav-item">
-                            <a class="info number" href="tel:+380961111111" aria-label="позвонить по телефону +380961111111">
-                                <svg class="icon-phone" width="10" height="15">
-                                    <use href="./images/sprite.svg#smartphone"></use>
-                                </svg>+38 096 111 11 11</a>
-                        </li>
+                <button type="button" class="menu-button" data-menu-button
+                        aria-expanded="false"
+                        aria-controls="menu-container">
+                        <svg class="menu-close" width="40" heidht="40" aria-label="Переключатель мобильного меню">
+                            <use class="icon-close-menu" href="./images/sprite.svg#close-menu"></use>
+                            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+                        </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="site-nav">
+                        <li class="site-nav-item"><a class="link-1" href="./index.html">Студия</a></li>
+                        <li class="site-nav-item"><a class="link-1 active current" href="./portfolio.html">Портфолио</a></li>
+                        <li class="site-nav-item"><a class="link-1" href="">Контакты</a></li>
                     </ul>
-                </address>
+                
+                    <address class="address-container">
+                        <ul class="auth-nav">
+                            <li class="auth-nav-item">
+                                <a class="info mail" href="mailto:info@devstudio.com" aria-label="написать письмо на электронную почту info@devstudio.com">
+                                    <svg class="icon-mail" width="16" height="11">
+                                        <use href="./images/sprite.svg#envelope"></use>
+                                    </svg>info@devstudio.com</a>
+                            </li>
+                            <li class="auth-nav-item">
+                                <a class="info number" href="tel:+380961111111" aria-label="позвонить по телефону +380961111111">
+                                    <svg class="icon-phone" width="10" height="15">
+                                        <use href="./images/sprite.svg#smartphone"></use>
+                                    </svg>+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
             </nav>
         </div>
     </header>
@@ -62,7 +72,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/сайт-1.jpg" alt="веб-сайт">
+                                            <img class="card-image"
+                                                srcset="./images/сайт1.jpg 1x, ./images/сайт1-2x.jpg 2x"
+                                                src="./images/сайт1.jpg" 
+                                                alt="веб-сайт" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -76,7 +89,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/дизайн-1.jpg" alt="веб-сайт">
+                                            <img class="card-image"
+                                                srcset="./images/дизайн1.jpg 1x, ./images/дизайн1-2x.jpg 2x"
+                                                src="./images/дизайн1.jpg"
+                                                alt="веб-сайт" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -90,7 +106,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/приложение-1.jpg" alt="рыба">
+                                            <img class="card-image"
+                                                srcset="./images/приложение1.jpg 1x, ./images/приложение1-2x.jpg 2x"
+                                                src="./images/приложение1.jpg"
+                                                alt="рыба" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -104,7 +123,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/маркетинг-1.jpg" alt="наушники">
+                                            <img class="card-image"
+                                                srcset="./images/маркетинг1.jpg 1x, ./images/маркетинг1-2x.jpg 2x"
+                                                src="./images/маркетинг1.jpg"
+                                                alt="наушники" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -118,7 +140,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/приложение-2.jpg" alt="коробки">
+                                            <img class="card-image"
+                                                srcset="./images/приложение2.jpg 1x, ./images/приложение2-2x.jpg 2x"
+                                                src="./images/приложение2.jpg"
+                                                alt="коробки" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -132,7 +157,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/сайт-2.jpg" alt="монитор">
+                                            <img class="card-image"
+                                                srcset="./images/сайт2.jpg 1x, ./images/сайт2-2x.jpg 2x"
+                                                src="./images/сайт2.jpg"
+                                                alt="монитор" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -146,7 +174,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/дизайн-2.jpg" alt="журнал">
+                                            <img class="card-image"
+                                                srcset="./images/дизайн2.jpg 1x, ./images/дизайн2-2x.jpg 2x"
+                                                src="./images/дизайн2.jpg"
+                                                alt="журнал" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -160,7 +191,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/маркетинг-2.jpg" alt="лейбл">
+                                            <img class="card-image"
+                                                srcset="./images/маркетинг2.jpg 1x, ./images/маркетинг2-2x.jpg 2x"
+                                                src="./images/маркетинг2.jpg"
+                                                alt="лейбл" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -174,7 +208,10 @@
                                 <a class="example-2" href="">
                                     <div class="card">
                                         <div class="card-active">
-                                            <img class="card-image" src="./images/приложение-3.jpg" alt="ноутбук">
+                                            <img class="card-image"
+                                                srcset="./images/приложение3.jpg 1x, ./images/приложение3-2x.jpg 2x"
+                                                src="./images/приложение3.jpg"
+                                                alt="ноутбук" width="450" />
                                             <p class="description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                         </div>
                                         <div class="card-content">
@@ -245,6 +282,8 @@
                      </form>
             </div>
         </div>
-   </footer>    
+   </footer> 
+   
+   <script src="./js/menu.js"></script>
 </body>
 </html>

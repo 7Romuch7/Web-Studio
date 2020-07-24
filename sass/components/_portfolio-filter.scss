@@ -1,12 +1,23 @@
 .filter {
     display: flex;
-    justify-content: center;
-    margin-top: 0;
-    margin-bottom: 50px;
     padding: 0;
+    margin-top: 0;
 
-    .filter-list + .filter-list {
-        margin-left: 8px;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin-bottom: 30px;
+        &-list + &-list {
+            margin-left: 8px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
     }
 }
 
@@ -33,10 +44,20 @@
 
 .first {
     min-width: 73px;
+
+    @media screen and (max-width: 767px) {
+        margin-right: 8px;
+    }
 }
 
 .second {
     min-width: 128px;
+    
+    @media screen and (max-width: 767px) {
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
+    
 }
 
 .third {
@@ -45,6 +66,10 @@
 
 .fourth {
     min-width: 103px;
+
+    @media screen and (max-width: 767px) {
+        margin-right: 8px;
+    }
 }
 
 .fifth {
