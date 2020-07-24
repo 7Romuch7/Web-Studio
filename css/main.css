@@ -1267,6 +1267,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 12px;
@@ -1281,9 +1282,20 @@
 }
 
 .checkbox-label .terms {
-  margin-right: 4px;
-  margin-left: 4px;
   color: #2196F3;
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox-label .terms {
+    margin-left: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-label .terms {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
 }
 
 .checkbox {
@@ -1581,6 +1593,9 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card-content .description-2 {
@@ -1590,10 +1605,5 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-
-.poster {
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=main.css.map */
