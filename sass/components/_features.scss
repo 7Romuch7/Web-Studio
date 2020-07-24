@@ -61,10 +61,13 @@
 }
 
 .icon-block {
+    width: 100%;
     display: flex;
+    justify-content: center;
     background: $complementary-color3;
     margin-bottom: 30px;
-    padding: 25px 190px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-radius: 4px;
 
     @media screen and (min-width: $tablet) {
