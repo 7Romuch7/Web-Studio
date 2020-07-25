@@ -139,6 +139,10 @@
   height: 40px;
 }
 
+.menu-container {
+  z-index: 1;
+}
+
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
