@@ -421,6 +421,11 @@
   letter-spacing: 0.06em;
 }
 
+.service-title:hover {
+  cursor: pointer;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
 .hidden-title {
   position: absolute;
   width: 1px;
@@ -1085,7 +1090,6 @@
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  z-index: 3;
 }
 
 @media screen and (max-width: 1199px) {

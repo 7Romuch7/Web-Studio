@@ -92,3 +92,8 @@
     line-height: 1.88;
     letter-spacing: 0.06em
 }
+
+.service-title:hover {
+    cursor: pointer;
+    background-color: $complementary-color7;
+}
